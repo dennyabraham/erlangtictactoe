@@ -6,7 +6,7 @@
 %%% @copyright 2010 Denny Abraham
 %%%----------------------------------------------------------------,
 
--module (game_test).
+-module (example_test).
 
 -export ([run/0]).
 
@@ -23,6 +23,10 @@ tests() ->
         
         it_should("equal five", 
             {four(), should(equal(5))}
+        ),
+
+        it_should("equal seven", 
+            {four(), should(equal(7))}
         )
     ].
     

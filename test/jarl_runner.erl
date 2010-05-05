@@ -28,9 +28,9 @@ run_test({Message, Test}) ->
     
 display(Results) ->
     {Successes, Failures} = process(Results),
-    io:format("~w Successes:~n", [length(Successes)]),
+    io:format(" ~n~w Successes:~n", [length(Successes)]),
     display_successes(lists:reverse(Successes)),
-    io:format("~n~w Failures:~n", [length(Failures)]),
+    io:format(" ~n~w Failures:~n", [length(Failures)]),
     display_failures(lists:reverse(Failures)).
     
 process(Results) ->
@@ -46,17 +46,17 @@ process([{failure, Result, Message, StackTrace} | RemainingResults], Successes, 
 display_successes([]) -> 
     done;
 display_successes([{success, _, Message, _} | RemainingSuccesses]) ->
-    io:format("Success:~n"),
-    io:format("It did ~s~n", [Message]),
+    io:format(" * Success:~n"),
+    io:format("   It did ~s~n", [Message]),
     display_successes(RemainingSuccesses).
 
 display_failures([]) -> 
     done;
 display_failures([{failure, Reason, Message, StackTrace} | RemainingFailures]) ->
-    io:format("Failure:~n"),
-    io:format("Expected it to ~s~n", [Message]),
-    io:format("~w~n", [Reason]),
-    io:format("~w~n", [StackTrace]),
+    io:format(" * Failure:~n"),
+    io:format("   Expected it to ~s~n", [Message]),
+    io:format("   ~w~n", [Reason]),
+    io:format("   ~w~n", [StackTrace]),
     display_failures(RemainingFailures).
 
     

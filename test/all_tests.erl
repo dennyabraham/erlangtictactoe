@@ -6,8 +6,12 @@
 %%% @copyright 2010 Denny Abraham
 %%%----------------------------------------------------------------,
 
--module (game).
+-module (all_tests).
 
--export ([four/0]).
+-export ([run/0]).
 
-four() -> 4.
+run() ->
+    io:format("~n::Example Tests::~n"),
+    example_test:run(),
+    io:format("~n::Game Tests::~n"),
+    game_test:run().

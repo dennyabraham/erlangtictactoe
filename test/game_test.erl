@@ -10,7 +10,7 @@
 
 -export ([tests/0]).
 
--import(jarl_matchers).
+-import(jarl_matchers, [it_should/2, should/1, equal/1]).
 
 tests() -> 
     [ 

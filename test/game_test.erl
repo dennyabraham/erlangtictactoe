@@ -8,13 +8,10 @@
 
 -module (game_test).
 
--export ([run/0]).
+-export ([tests/0]).
 
--import(jarl_matchers, [it_should/2, should/1, equal/1]).
+-import(jarl_matchers).
 
-run() ->
-    jarl_runner:run(tests()).
-    
 tests() -> 
     [ 
         it_should("equal four", 

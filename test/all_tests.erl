@@ -10,8 +10,10 @@
 
 -export ([run/0]).
 
+-import(jarl_runner, [run/1]).
+
 run() ->
-    io:format("~n::Example Tests::~n"),
-    example_test:run(),
+    % io:format("~n::Example Tests::~n"),
+    % run(example_test:tests()),
     io:format("~n::Game Tests::~n"),
-    game_test:run().
+    run(game_test:tests()).

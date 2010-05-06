@@ -8,12 +8,9 @@
 
 -module (example_test).
 
--export ([run/0]).
+-export ([tests/0]).
 
 -import(jarl_matchers, [it_should/2, should/1, equal/1]).
-
-run() ->
-    jarl_runner:run(tests()).
     
 tests() -> 
     [ 

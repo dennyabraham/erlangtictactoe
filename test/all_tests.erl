@@ -14,8 +14,8 @@
 
 run() ->
     % io:format("~n::Example Tests::~n"),
-    % run(example_test:tests()),
-    % io:format("~n::Game Tests::~n"),
-    % run(game_test:tests()),
+    % run(example_test:factorial_tests()).
+    io:format("~n::Game Tests::~n"),
+    run(game_test:tests()),
     io:format("~n::Display Tests::~n"),
     run(display_test:tests()).

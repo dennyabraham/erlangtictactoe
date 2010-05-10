@@ -26,3 +26,7 @@ task :default => :compile
 task :test => [:compile, :compile_tests] do
   sh "erl -pa ebin -run all_tests run -run init stop"
 end
+
+task :play => [:compile] do 
+  sh "erl -pa ebin -run game play -run init stop"
+end

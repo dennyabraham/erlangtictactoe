@@ -8,7 +8,7 @@
 
 -module (display).
 
--export ([board/1, board/2, show_board/2, show_board/1]).
+-export ([board/1, board/2, show_board/2, show_board/1, show_message/1]).
 
 
 show_board(Rows, Matches) -> 
@@ -17,6 +17,9 @@ show_board(Rows, Matches) ->
 show_board(Rows) ->
     io:format("~n"),
     io:format(board(Rows)).
+    
+show_message(Message) ->
+    io:format(Message).
     
 board({InputRow1, InputRow2, InputRow3}, {diagonal, Matches}) ->
     OutputRow1 = cross_out_diagonal_matches(InputRow1, 1, Matches),

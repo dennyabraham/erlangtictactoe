@@ -8,6 +8,15 @@
 
 -module (game).
 
--export ([four/0]).
+-export ([play/0]).
 
-four() -> 4.
+play() -> 
+    Arguments = "",
+    play(Arguments).
+
+play(Arguments) -> 
+    GameOver = true,
+    case GameOver of
+        true -> game_over;
+        false -> play(Arguments)
+    end.

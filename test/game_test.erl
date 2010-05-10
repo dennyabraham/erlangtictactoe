@@ -14,8 +14,8 @@
 
 tests() -> 
     [ 
-        it_should("equal four", 
-            {game:four(), should(equal(4))}
-        )
+        % it_should("equal four", 
+        %     {game:four(), should(equal(4))}
+        % )
     ].
     
